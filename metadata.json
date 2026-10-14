@@ -1,0 +1,8 @@
+{
+  "name": "Remix MedicaCloud — Sistema Clínico Integral",
+  "description": "Plataforma clínica moderna para gestión de citas médicas, pacientes, farmacia y panel administrativo con modo oscuro y temas dinámicos.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --primary-50: #f0fdfa;
+    --primary-100: #ccfbf1;
+    --primary-200: #99f6e4;
+    --primary-300: #5eead4;
+    --primary-400: #2dd4bf;
+    --primary-500: #14b8a6;
+    --primary-600: #0d9488;
+    --primary-700: #0f766e;
+    --primary-800: #115e59;
+    --primary-900: #134e4a;
+    --primary-ring: rgba(13, 148, 136, 0.25);
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    font-family: var(--font-family);
+  }
+}
+
+/* Custom font helper classes */
+.font-jakarta {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-outfit {
+  font-family: 'Outfit', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-lexend {
+  font-family: 'Lexend', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-manrope {
+  font-family: 'Manrope', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-dmsans {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif !important;
+}
+
+.font-jetbrains {
+  font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* Smooth transitions for theme toggle */
+.theme-transition {
+  transition: background-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+              color 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom fine scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: rgba(100, 116, 139, 0.4);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
